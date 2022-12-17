@@ -94,7 +94,7 @@ export default function Home() {
         <div className="w-full h-[400px] relative">
           <img src={footerGroup.src} className="w-full h-full object-fill absolute"/>
           <div className="relative z-10 w-full flex flex-col items-center justify-around h-full">
-            <div className="w-1/2 bg-[#192026] h-[200px] border-2 border-primary-main rounded relative z-20 p-4">
+            <div className="w-1/2 bg-[#192026] h-[200px] border-2 border-primary-main rounded relative z-20 p-8">
              <div className="flex">
                 <img src={review.imgSrc} className="w-12 h-12 rounded-full mx-2"/> 
                 <div>
@@ -154,7 +154,8 @@ export default function Home() {
       <div className="w-full relative">
         <img src={footerGroup.src} className="absolute object-contain w-full" />
         <div className="relative z-10 w-full">
-          <Container className="flex min-h-[250px]">
+          <Container className="min-h-[250px]">
+            <div className="w-full h-full flex">
             <div className="p-4 w-1/3 flex flex-col justify-around">
               <Logo />
               <div className="text-white">
@@ -172,6 +173,7 @@ export default function Home() {
               {data2.map((data, i) => <div key={i}>
                 <p className="text-white"> {data.label} </p>
               </div>)}
+            </div>
             </div>
           </Container>
           <Container>
