@@ -1,0 +1,33 @@
+{
+  "name": "strapi-app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.5"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.5.4",
+    "@strapi/plugin-users-permissions": "4.5.4",
+    "@strapi/strapi": "4.5.4",
+    "noblox.js": "^4.13.1",
+    "pg": "8.6.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b925b566-2978-45f4-89c0-1ba5674742b9"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

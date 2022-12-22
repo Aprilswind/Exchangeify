@@ -6,7 +6,7 @@ import whyChoose from "../images/Group 1321314633.png";
 import heroGroup from "../images/Group 8303.png";
 import footerGroup from "../images/Group 1321314632.png";
 import Logo from "../components/logo";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const data1 = [
@@ -49,9 +49,6 @@ export default function Home() {
     },
   ]
   const [review, setReview] = useState(data3[0])
-  useEffect(() => {
-    console.log(review)
-  }, [review])
   return (
     <div className="bg-[#0d141a] w-full min-h-screen relative">
       <img src={heroGroup.src} className="w-full object-contain absolute" />
@@ -70,18 +67,22 @@ export default function Home() {
                 className="rounded-lg bg-primary-main"
                 variant="contained"
               >
-                {" "}
-                buy roblox{" "}
+                buy roblox
               </Button>
-              <Button className="rounded-lg text-white ml-4">
-                {" "}
-                sell roblox{" "}
+              <Button variant="outlined" className="rounded-lg text-white ml-4">
+                sell roblox
               </Button>
             </div>
           </div>
         </div>
       </Container>
-      <img className="object-contain w-full" src={whyChoose.src} />
+      <div className="w-full relative h-screen flex justify-end">
+        <img className="object-contain top-1/2 -translate-y-1/2 w-full absolute" src={whyChoose.src} />
+        <div className="h-full w-1/2 p-4 flex flex-col justify-center items-center relative z-10">
+          <p className="text-white text-6xl uppercase mb-12"> why choose us </p>
+          <p className="text-white uppercase"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+      </div>
       <Container>
         <div className="min-h-screen flex flex-col justify-around py-12">
           <p className="text-white uppercase my-12 text-5xl text-center">
@@ -151,27 +152,27 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <div className="w-full relative">
+      <div className="w-full relative flex items-end mt-12">
         <img src={footerGroup.src} className="absolute object-contain w-full" />
-        <div className="relative z-10 w-full">
-          <Container className="min-h-[250px]">
+        <div className="relative z-10 w-full pb-4">
+          <Container className="h-[100px]">
             <div className="w-full h-full flex">
-            <div className="p-4 w-1/3 flex flex-col justify-around">
+            <div className="p-4 w-1/3 flex flex-col justify-center">
               <Logo />
-              <div className="text-white">
+              <div className="text-white mt-4 text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               </div>
             </div>
-            <div className="flex flex-col w-1/3 p-4 justify-around">
-              <p className="text-xl text-white text-center"> Contact Info </p>
-              <p className="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut l </p>
-              <p className="text-white"> +911234567890 </p>
-              <p className="text-white"> Lorem ipsum dolor sit </p>
+            <div className="flex flex-col w-1/3 p-4 justify-center">
+              <p className="mb-4 text-xl text-white text-center"> Contact Info </p>
+              <p className="text-white text-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut l </p>
+              <p className="text-white text-sm"> +911234567890 </p>
+              <p className="text-white text-sm"> Lorem ipsum dolor sit </p>
             </div>
-            <div className="flex flex-col w-1/3 p-4 justify-around items-center">
-              <p className="text-white text-xl text-center"> Quick Links </p>
+            <div className="flex flex-col w-1/3 p-4 justify-center items-center">
+              <p className="mb-4 text-white text-xl text-center"> Quick Links </p>
               {data2.map((data, i) => <div key={i}>
-                <p className="text-white"> {data.label} </p>
+                <p className="text-white text-sm"> {data.label} </p>
               </div>)}
             </div>
             </div>
@@ -179,7 +180,7 @@ export default function Home() {
           <Container>
             <div className="bg-gray-50 mt-16 w-full h-[1px]"></div>
           </Container>
-            <p className="text-gray-50 text-sm text-center my-4">
+            <p className="text-gray-50 text-sm text-center mt-4">
               Copyright 2022, All Right Reserved
             </p>
         </div>
